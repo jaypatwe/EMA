@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #003399;
+  --color-brand-secondary: #4066b3;
+  --color-brand-bg: #f8f9fc;
+  --color-brand-text: #111111;
+  --color-brand-muted: #6c757d;
+  --color-brand-success: #22c55e;
+  --color-brand-risk: #e32a0d;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-brand-bg)] text-[var(--color-brand-text)] font-sans antialiased;
+  }
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
